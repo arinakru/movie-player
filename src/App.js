@@ -1,28 +1,21 @@
-// import {BrowserRouter, Route, Switch} from 'react-router-dom'
-// import React, { useState } from 'react';
-//import { Typography } from 'antd';
-// import { Button } from 'antd/es/radio';]
 import React from 'react';
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import { BrowserRouter, Route, Routes} from 'react-router-dom'
 import { Home } from './pages/Home';
-import { Navbar } from './components/Navbar'
+//import { Navbar } from './components/Navbar'
 import { RegistrationForm } from './pages/RegistrationForm';
+import {Layout} from './components/Layout'
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        
-        <Navbar />
-        {/* Определяем маршруты */}
-          <Routes> 
-           <Route path={'/'} element ={<Home/>} />
-          </Routes>
-          <Routes> 
-           <Route path={'/'} element ={<RegistrationForm/>} />
-          </Routes>
-        
-      </div>
-      </BrowserRouter>
+    <div>
+      <Routes>
+        <Route path='/' element={<Layout/>}>
+          <Route index element ={<Home/>} /> 
+          <Route path={'Login'} element ={<RegistrationForm/>} />
+        </Route>
+      </Routes>
+    </div>
+   </BrowserRouter>
   );
 }
 

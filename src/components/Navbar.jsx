@@ -19,10 +19,7 @@ export const Navbar=()=> {
         label:'Favorite',
         key: 'favorite'
       },
-      {
-        label:'History',
-        key: 'history'
-      },
+
       {
         label:'Login',
         key: 'login'

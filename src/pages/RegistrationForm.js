@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Button, Form, Input, Checkbox } from 'antd';
 
 
-
 export const RegistrationForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
