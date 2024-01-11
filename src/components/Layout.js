@@ -1,18 +1,30 @@
-import { Link, Outlet } from "react-router-dom";
-import { Layout as AntLayout } from 'antd';
+import { NavLink, Outlet } from "react-router-dom";
+import { Layout as AntLayout } from "antd";
+import { Footer } from "antd/es/layout/layout";
 export const Layout = () => {
   return (
     <>
       <AntLayout.Header>
-        <Link to="/" style={{ marginRight: '20px' }}>Home</Link>
-        <Link to="Login">Login</Link>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div>
+            <NavLink to="/">Home</NavLink>
+          </div>
+          <div>
+            <NavLink to="Login" style={{ marginRight: "20px" }}>
+              Login
+            </NavLink>
+            <NavLink to="Registration">Registration</NavLink>
+          </div>
+        </div>
       </AntLayout.Header>
 
-      <Outlet/>
+      <Outlet />
 
-      <AntLayout.Footer>2024</AntLayout.Footer>
+      <Footer style={{ textAlign: 'center' }}>
+         ©{new Date().getFullYear()} 
+      </Footer>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

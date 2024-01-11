@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Button, Form, Input, Checkbox } from 'antd';
 
 
-export const RegistrationForm = () => {
+export const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [emailDirty, setEmailDirty] = useState(false);
@@ -52,11 +52,10 @@ export const RegistrationForm = () => {
     wrapperCol={{ span: 16 }}
     style={{ maxWidth: 400, margin:20 }}>
 
-        <h1>Регистрация</h1>
+        <h1>Вход</h1>
         {(emailDirty && emailError) && <div style={{color:'red'}}>{emailError}</div>}
         <Input onChange={event=> emailHandler(event)} value={email} onBlur={event =>blurHandler(event)} name='email' type='text'placeholder='Введите свой email'/>
         {(passwordDirty && passwordError) && <div style={{color:'red'}}>{passwordError}</div>}
-        
         <Input onChange={event=> passwordHandler(event)} value={password} onBlur={event =>blurHandler(event)} name='password' type='password' placeholder='Введите свой пароль'/>
 
         <Checkbox>Запомнить меня</Checkbox>
@@ -67,7 +66,7 @@ export const RegistrationForm = () => {
     )
 
 }
-    export default RegistrationForm
+    export default LoginForm
 
   
 
