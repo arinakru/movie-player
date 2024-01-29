@@ -3,7 +3,9 @@ import { BrowserRouter, Route, Routes} from 'react-router-dom'
 import { Home } from './pages/Home';
 import { RegistrationForm } from './pages/RegistrationForm';
 import { LoginForm } from './pages/LoginForm';
-import {Layout} from './components/Layout'
+import {Layout} from './components/Layout';
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -17,7 +19,11 @@ function App() {
       </Routes>
     </div>
    </BrowserRouter>
+   
+   
   );
+
+
 }
 
 export default App;
