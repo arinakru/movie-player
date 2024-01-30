@@ -1,5 +1,6 @@
 import React from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import "../style/Movie.css"
 
 export const Movie = ({id, year, title, summary,poster,genres}) => {
   return (
@@ -23,7 +24,11 @@ export const Movie = ({id, year, title, summary,poster,genres}) => {
         <h5 className="movie__year">{year}</h5>
         <ul className="movie__genres">
           {genres.map((genre, index) => {
-            <li key = {index} className="genres__genre">{genre}</li>
+            return (
+            <li key = {index} className="genres__genre">
+            {genre}
+            </li>
+            );
           })}
         </ul>
         <p className="movie__summary">{summary.slice(0, 140)}...</p>

@@ -1,7 +1,7 @@
 import React from "react";
 import axios from 'axios';
 import Movie from "./Movie";
-// import { useEffect, useState, } from 'react';
+import "../style/App.css";
 
 
 export class Home extends React.Component {
