@@ -4,7 +4,7 @@ import { Home } from './pages/Home';
 import { RegistrationForm } from './pages/RegistrationForm';
 import { LoginForm } from './pages/LoginForm';
 import {Layout} from './components/Layout';
-
+import {Ditail} from './components/Ditails'
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
           <Route index element ={<Home/>} /> 
           <Route path={'Login'} element ={<LoginForm/>} />
           <Route path={'Registration'} element ={<RegistrationForm/>} />
+          <Route path = />
         </Route>
       </Routes>
     </div>
